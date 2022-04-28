@@ -1,5 +1,8 @@
 import define from '@/assets/js/define'
 import sabian_list from '@/assets/yml/sabian.yml'
+import sabian_ja_list from '@/assets/yml/sabian_ja.yml'
+import sabian_text_ja_list from '@/assets/yml/sabian_text_ja.yml'
+import date_ja_list from '@/assets/yml/date_ja.yml'
 export default{
   created(){
     Number.prototype.abs = function(){
@@ -19,6 +22,18 @@ export default{
       console.log(strs)
       let num = strs[1].getSignNumber() * 30 + strs[2].int() - 1
       return sabian_list[num]
+    }
+
+    Number.prototype.getSabianJa = function(){
+      return sabian_ja_list[this]
+    }
+
+    Number.prototype.getSabianTextJa = function(){
+      return sabian_text_ja_list[this]
+    }
+
+    Number.prototype.getDateJa = function(){
+      return date_ja_list[this]
     }
 
     Number.prototype.getSign = function(){
