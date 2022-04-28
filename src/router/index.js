@@ -14,6 +14,16 @@ const routes = [
     name: 'symbol',
     component:() => import('@/views/Symbol.vue'),
   },
+  {
+    path: '/sabian-list-print-ja',
+    name: 'sabian-list-print-ja',
+    component:() => import('@/views/SabianListPrintJa.vue'),
+  },
+  {
+    path: '*', 
+    name: 'home',
+    component: () => import('@/views/Home.vue')
+  },
 ]
 
 const router = new VueRouter({
